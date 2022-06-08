@@ -29,15 +29,12 @@ const fareMultiplier = createFareMultiplier(int2)
 console.log(fareMultiplier(20))
 
 
-const fareDoubler = fareMultiplier()
-
-
-
-
+const fareDoubler = createFareMultiplier(2)
+const fareTripler = createFareMultiplier(3)
 
 
 function selectDifferentDrivers(drivers, cb){
   return cb(drivers)
 }
 
-console.log(selectDifferentDrivers(drivers, returnFirstTwoDrivers()))
+console.log(selectDifferentDrivers(drivers, returnFirstTwoDrivers))
