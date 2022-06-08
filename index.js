@@ -1,7 +1,8 @@
 // Code your solution in this file!
 const drivers = ["David", "Erick", "Elizabeth", "Tony"];
 const returnFirstTwoDrivers = function(drivers){
-  return drivers.slice(0, 2)
+  let truck = drivers.slice(0, 2)
+  return truck
 }
 console.log(returnFirstTwoDrivers(drivers));
 
@@ -35,7 +36,8 @@ const fareDoubler = fareMultiplier()
 
 
 
-function selectDifferentDrivers(drivers, driver2){
-  return driver2(drivers)
+function selectDifferentDrivers(drivers, cb){
+  return cb(drivers)
 }
-selectDifferentDrivers(drivers, returnFirstTwoDrivers())
+
+console.log(selectDifferentDrivers(drivers, returnFirstTwoDrivers()))
